@@ -8,7 +8,7 @@ Link to the Website Devop't Document: https://docs.google.com/document/d/1KMEiqX
 Link to the Presentation Slides: https://docs.google.com/presentation/d/1jY0WMO4ImTO3FEO-z0WyUpSZkTl-3FkPLVNK00kMETc/edit?usp=sharing
 
 
-## Project Overview
+## Project Overview 
 
 This Smart Waste Management System has three primary user roles:
 
