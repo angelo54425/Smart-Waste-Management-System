@@ -1,0 +1,11 @@
+<!-- collect.html -->
+{% extends "base.html" %} {% block content %}
+<h2>Collect Garbage</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div>{{ form.waste_category.label }} {{ form.waste_category }}</div>
+  <div>{{ form.material.label }} {{ form.material }}</div>
+  <div>{{ form.quantity.label }} {{ form.quantity }}</div>
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

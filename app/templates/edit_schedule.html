@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Edit Schedule - Smart Waste
+Management System{% endblock %} {% block content %}
+<section id="edit-schedule">
+  <h2>Edit Schedule</h2>
+  <form
+    id="edit-schedule-form"
+    method="post"
+    action="{{ url_for('user.edit_schedule', schedule_id=schedule.id) }}"
+  >
+    {{ form.hidden_tag() }}
+    <div>{{ form.day_of_week.label }} {{ form.day_of_week() }}</div>
+    <button type="submit">{{ form.submit.label }}</button>
+  </form>
+</section>
+{% endblock %}

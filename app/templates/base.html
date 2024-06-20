@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Smart Waste Management System{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Smart Waste Management System</h1>
+    </header>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+        {% if current_user.is_authenticated %} {% if current_user.role ==
+        'admin' %}
+        <li><a href="{{ url_for('admin.view_users') }}">Manage Users</a></li>
+        <li><a href="{{ url_for('admin.view_analytics') }}">Analytics</a></li>
+        {% elif current_user.role == 'service-man' %}
+        <li>
+          <a href="{{ url_for('service.view_collections') }}"
+            >View Collections</a
+          >
+        </li>
+        {% endif %}
+        <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        {% else %}
+        <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+    <footer>&copy; 2024 Smart Waste Management System</footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Login - Smart Waste Management
+System{% endblock %} {% block content %}
+<section id="login-section">
+  <h2>Login to Your Account</h2>
+  <form method="POST" action="{{ url_for('auth.login') }}">
+    {{ form.hidden_tag() }}
+    <label for="email">Email:</label>
+    {{ form.email(id='email') }}
+    <label for="password">Password:</label>
+    {{ form.password(id='password') }}
+    <button type="button" id="togglePassword">Show</button>
+    {{ form.submit() }}
+  </form>
+</section>
+{% endblock %}

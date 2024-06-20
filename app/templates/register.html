@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Register - Smart Waste Management
+System{% endblock %} {% block content %}
+<section id="register-section">
+  <h2>Create a New Account</h2>
+  <form method="POST" action="{{ url_for('auth.register') }}">
+    {{ form.hidden_tag() }}
+    <label for="names">Names:</label>
+    {{ form.names(id='names') }}
+    <label for="email">Email:</label>
+    {{ form.email(id='email') }}
+    <label for="password">Password:</label>
+    {{ form.password(id='password') }}
+    <label for="confirm_password">Confirm Password:</label>
+    {{ form.confirm_password(id='confirm_password') }}
+    <label for="address">Address:</label>
+    {{ form.address(id='address') }}
+    <label for="role">Role:</label>
+    {{ form.role(id='role') }} {{ form.submit() }}
+  </form>
+</section>
+{% endblock %}

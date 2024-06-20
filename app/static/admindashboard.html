@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Smart Waste Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Waste Collection Schedule</a></li>
+            <li><a href="tracking.html">Recycling Tracker</a></li>
+            <li><a href="admindashboard.html">Admin Dashboard</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="admin-dashboard">
+            <h2>Admin Dashboard</h2>
+            <div class="admin-section">
+                <h3>Overall System Performance</h3>
+                <p>Monitor the overall performance of the waste management system, including user activity, collection statistics, and recycling rates.</p>
+                <!-- Add performance metrics here -->
+            </div>
+            <div class="admin-section">
+                <h3>Manage Users</h3>
+                <form id="user-management-form">
+                    <label for="user-action">Action:</label>
+                    <select id="user-action" name="user-action">
+                        <option value="add">Add User</option>
+                        <option value="remove">Remove User</option>
+                        <option value="update">Update User</option>
+                    </select>
+                    <label for="names">names:</label>
+                    <input type="text" id="names" name="names" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <!-- Add user management features here -->
+            </div>
+            <div class="admin-section">
+                <h3>Manage Routes and Schedules</h3>
+                <form id="route-management-form">
+                    <label for="route-action">Action:</label>
+                    <select id="route-action" name="route-action">
+                        <option value="add">Add Route</option>
+                        <option value="remove">Remove Route</option>
+                        <option value="update">Update Route</option>
+                    </select>
+                    <label for="route-details">Route Details:</label>
+                    <input type="text" id="route-details" name="route-details" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <!-- Add route and schedule management features here -->
+            </div>
+            <div class="admin-section">
+                <h3>Track Collection Performance</h3>
+                <p>Track the performance of waste collection services, including the number of collections, adherence to schedules, and efficiency metrics.</p>
+                <!-- Add collection performance tracking features here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Smart Waste Management System
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

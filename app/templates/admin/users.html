@@ -1,0 +1,38 @@
+<!-- admin/users.html -->
+{% extends "base.html" %} {% block content %}
+<h2>Manage Users</h2>
+
+<div class="actions">
+  <a href="{{ url_for('admin.add_user') }}" class="btn btn-primary"
+    >Add New User</a
+  >
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Names</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.names }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.address }}</td>
+      <td>
+        <a href="{{ url_for('admin.edit_user', user_id=user.id) }}">Edit</a> |
+        <a href="{{ url_for('admin.delete_user', user_id=user.id) }}">
+          Delete
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

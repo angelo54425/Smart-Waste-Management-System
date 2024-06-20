@@ -1,0 +1,86 @@
+<!-- collections.html -->
+{% extends "base.html" %} {% block content %}
+
+<div class="stats-cards">
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-weight"></i>
+      <!-- Font Awesome icon for weight -->
+    </div>
+    <h3>Total Waste Collected</h3>
+    <p>{{ total_waste_collected }} kg</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-check-circle"></i>
+      <!-- Font Awesome icon for completed -->
+    </div>
+    <h3>Total Completed Schedules</h3>
+    <p>{{ total_completed_schedules }}</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-times-circle"></i>
+      <!-- Font Awesome icon for cancelled -->
+    </div>
+    <h3>Total Cancelled Schedules</h3>
+    <p>{{ total_cancelled_schedules }}</p>
+  </div>
+</div>
+
+<h2>Upcoming Collections</h2>
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Collection Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for collection in collections %}
+    <tr>
+      <td>{{ collection.user.names }}</td>
+      <td>{{ collection.collection_date }}</td>
+      <td>{{ collection.status }}</td>
+      <td>
+        <a
+          href="{{ url_for('service.cancel_collection', collection_id=collection.id) }}"
+          >Cancel</a
+        >
+        |
+        <a
+          href="{{ url_for('service.collect_garbage', collection_id=collection.id) }}"
+          >Collect</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Waste Tracking</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Waste Category</th>
+      <th>Material</th>
+      <th>Quantity</th>
+      <th>Impact Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for track in tracks %}
+    <tr>
+      <td>{{ track.created_at }}</td>
+      <td>{{ track.waste_category }}</td>
+      <td>{{ track.material }}</td>
+      <td>{{ track.quantity }}</td>
+      <td>{{ track.impact_score }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,10 @@
+waste-management-system/
+│
+├── index.html
+├── login.html
+├── register.html
+├── schedule.html
+├── tracking.html
+├── admindashboard.html
+├── styles.css
+└── script.js
