@@ -17,7 +17,7 @@ The system includes features for user registration and login, scheduling waste c
 
 The Smart Waste Management System encompasses the following core features and functionalities:
 
-- **User Registration and Login:** Secure user registration and login functionalities using Flask-Login for session management.
+- **User Registration and Login:** Secure user registration  login functionalities using Flask-Login for session management.
 - **Waste Collection Schedule:** Users can schedule waste collection based on their region and receive notifications.
 - **Recycling Tracker:** Track recycling efforts and view environmental impact metrics.
 - **Waste Collection Services Management:** Manage routes, schedules, and track performance.
