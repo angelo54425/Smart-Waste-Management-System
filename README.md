@@ -5,7 +5,7 @@ Welcome to the Smart Waste Management System, an innovative web application that
 
 Link to the Website: https://smart-waste-management-system.onrender.com/
 Link to the Website Devop't Document: https://docs.google.com/document/d/1KMEiqXAI0Q3qkSdn5C1MOzmrTEU2L1xRg4SIMOWGmTc/edit?usp=sharing
-Link to the Presentation Slides: [https://docs.google.com/presentation/d/1jY0WMO4ImTO3FEO-z0WyUpSZkTl-3FkPLVNK00kMETc/edit?usp=sharing](https://docs.google.com/presentation/d/1A1LvqWyKajl82rRlLLqNEd3la6QWddMUkJaNlZkUk5E/edit#slide=id.p)
+Link to the Presentation Slides: https://docs.google.com/presentation/d/1A1LvqWyKajl82rRlLLqNEd3la6QWddMUkJaNlZkUk5E/edit#slide=id.p
 
 
 ## Project Overview 
