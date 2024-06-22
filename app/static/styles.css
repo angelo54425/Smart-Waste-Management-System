@@ -20,8 +20,9 @@ header {
 nav {
   background: #3b7a57;
   color: #fff;
+  top padding: 100px;
   padding: 10px 0;
-  position: center;
+  position: relative;
 }
 
 .nav-menu {
