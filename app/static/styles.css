@@ -8,6 +8,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 header {
@@ -21,7 +24,6 @@ nav {
   background: #3b7a57;
   color: #fff;
   top padding: 100px;
-  padding: 10px 0;
   position: relative;
 }
 
